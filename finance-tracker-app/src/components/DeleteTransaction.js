@@ -76,12 +76,18 @@ const DeleteTransaction = () => {
         isOpen={isDeleteAllModalOpen}
         onRequestClose={closeDeleteAllModal}
         contentLabel="Delete All Transactions"
+        className="modal"
+        overlayClassName="overlay"
       >
-        <div>
+        <div className="modal-content">
           <h2>Confirm Delete All</h2>
           <p>Are you sure you want to delete all transactions?</p>
-          <button onClick={handleDeleteAll}>Yes, Delete All</button>
-          <button onClick={closeDeleteAllModal}>Cancel</button>
+          <button className="confirm-button" onClick={handleDeleteAll}>
+            Yes, Delete All
+          </button>
+          <button className="cancel-button" onClick={closeDeleteAllModal}>
+            Cancel
+          </button>
         </div>
       </Modal>
     </div>

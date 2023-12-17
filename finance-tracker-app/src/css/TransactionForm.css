@@ -1,7 +1,6 @@
-/* frontend/src/css/TransactionForm.css */
-
 .form-container {
-    max-width: 400px;
+    max-width: 800px;
+    width: 800px;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;

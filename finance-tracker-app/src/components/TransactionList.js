@@ -12,29 +12,29 @@ const TransactionList = () => {
   }, [setTransactions]);
 
   return (
-    <div>
-      <h2>Transactions</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Description</th>
-            <th>Amount</th>
-            <th>Timestamp</th>
+    <div className="table-container">
+    <h2>Transactions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Timestamp</th>
+        </tr>
+      </thead>
+      <tbody>
+        {transactions.map(transaction => (
+          <tr key={transaction._id}>
+            <td>{transaction._id}</td>
+            <td>{transaction.description}</td>
+            <td>${transaction.amount}</td>
+            <td>{transaction.timestamp}</td>
           </tr>
-        </thead>
-        <tbody>
-          {transactions.map(transaction => (
-            <tr key={transaction._id}>
-              <td>{transaction._id}</td>
-              <td>{transaction.description}</td>
-              <td>${transaction.amount}</td>
-              <td>{transaction.timestamp}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+        ))}
+      </tbody>
+    </table>
+  </div>
   );
 };
 

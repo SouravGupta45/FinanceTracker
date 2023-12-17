@@ -31,6 +31,7 @@ const TransactionForm = ({ onTransactionAdded }) => {
         <input
           type="text"
           value={newTransaction.description}
+          placeholder="Enter description..."
           onChange={(e) => setNewTransaction({ ...newTransaction, description: e.target.value })}
         />
       </label>
@@ -38,7 +39,8 @@ const TransactionForm = ({ onTransactionAdded }) => {
         Amount:
         <input
           type="number"
-          value={newTransaction.amount}
+          value={newTransaction.amount === 0 ? '' : newTransaction.amount}
+          placeholder="Enter amount..."
           onChange={(e) => setNewTransaction({ ...newTransaction, amount: parseFloat(e.target.value) })}
         />
       </label>
