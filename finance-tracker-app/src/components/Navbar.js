@@ -1,6 +1,6 @@
 // frontend/src/components/Navbar.js
 import React from 'react';
-
+import '../css/Navbar.css'
 const Navbar = ({ onComponentChange }) => {
   const handleOptionClick = (option) => {
     onComponentChange(option);
