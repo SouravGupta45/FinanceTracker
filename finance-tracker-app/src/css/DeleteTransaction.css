@@ -1,0 +1,36 @@
+/* frontend/src/css/DeleteTransaction.css */
+.delete-button {
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .delete-all-button {
+    padding: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .delete-all-button:hover, .delete-button:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Modal Styles */
+  .ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+  
+  .ReactModal__Overlay--after-open{
+    opacity: 1;
+  }
+  
+  .ReactModal__Overlay--before-close{
+    opacity: 0;
+  }
+  
